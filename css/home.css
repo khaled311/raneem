@@ -1,4 +1,5 @@
 html {
+  overflow-y: hidden;
   scrollbar-width: thin;
   scrollbar-color: #4a71a3 #b4b4b4;
 }
@@ -1894,6 +1895,81 @@ html[dir="ltr"] .end .content .social a:not(:last-child) {
 
 .end .content .social a:hover i {
   color: #fff;
+}
+
+.pre {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #4A71A3;
+  z-index: 99999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.loader {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  position: relative;
+  margin: 0 auto;
+}
+
+#loader-7 {
+  -webkit-perspective: 120px;
+  -ms-perspective: 120px;
+  perspective: 120px;
+}
+
+#loader-7:before {
+  content: "";
+  position: absolute;
+  left: 25px;
+  top: 25px;
+  width: 50px;
+  height: 50px;
+  background-color: #FFF;
+  -webkit-animation: flip 1s infinite;
+          animation: flip 1s infinite;
+}
+
+@-webkit-keyframes flip {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  50% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+  100% {
+    -webkit-transform: rotateY(180deg) rotateX(180deg);
+            transform: rotateY(180deg) rotateX(180deg);
+  }
+}
+
+@keyframes flip {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  50% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+  100% {
+    -webkit-transform: rotateY(180deg) rotateX(180deg);
+            transform: rotateY(180deg) rotateX(180deg);
+  }
 }
 
 /*# sourceMappingURL=home.css.map */

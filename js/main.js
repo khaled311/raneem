@@ -153,12 +153,12 @@ $(function() {
   });
 
   // Preloder
-  // $(window).on("load", function() {
-  //   $("html").css("overflow-y", "auto");
-  //   $(".preloader").fadeOut(400, function() {
-  //     $(this).remove()
-  //   });
-  // });
+  $(window).on("load", function() {
+    $("html").css("overflow-y", "auto");
+    $(".pre").fadeOut(400, function() {
+      $(this).remove()
+    });
+  });
 
   // Animation On Scroll
   AOS.init();
