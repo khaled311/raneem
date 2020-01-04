@@ -287,6 +287,7 @@ html[dir="ltr"] .sideNav .options .search_pop {
   -webkit-transform: translateX(10px);
           transform: translateX(10px);
   opacity: 0;
+  width: 115px;
 }
 
 .sideNav > ul > li:nth-child(1) {
@@ -345,12 +346,10 @@ html[dir="ltr"] .sideNav .options .search_pop {
 
 .sideNav > ul > li i {
   position: absolute;
-  top: 13px;
-  left: 13px;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  top: 17px;
+  left: 17px;
   font-size: 9px;
-  color: currentColor;
+  color: #fff;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -361,8 +360,8 @@ html[dir="ltr"] .sideNav > ul > li i {
 }
 
 .sideNav > ul > li i.open {
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .sideNav > ul > li .drop {
