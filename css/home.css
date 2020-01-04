@@ -111,9 +111,24 @@ ul.res {
   visibility: hidden;
 }
 
+.navover span {
+  display: none;
+  color: #FFF;
+  font-size: 25px;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
 .navover.open {
   opacity: 1;
   visibility: visible;
+}
+
+.navover.open span {
+  display: block;
 }
 
 .sideNav {
