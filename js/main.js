@@ -161,5 +161,7 @@ $(function() {
   });
 
   // Animation On Scroll
-  AOS.init();
+  AOS.init({
+    once: true
+  });
 });
