@@ -44,6 +44,7 @@ $(function() {
   // Search
   $(".searchTriger .lnr-magnifier").on("click", function() {
     $("form.search").addClass("open");
+    $("html").css("overflow-y", "hidden");
     $("form.search input").focus();
     $(".navover").toggleClass("open");
   })
@@ -51,6 +52,7 @@ $(function() {
   $(".navover").on("click", function() {
     $(this).removeClass("open");
     $("form.search").removeClass("open");
+    $("html").css("overflow-y", "auto");
   })
 
   // Sticky Navbar
@@ -155,7 +157,7 @@ $(function() {
   // Preloder
   $(window).on("load", function() {
     $("html").css("overflow-y", "auto");
-    $(".pre").fadeOut(400, function() {
+    $(".preloader").fadeOut(400, function() {
       $(this).remove()
     });
   });
