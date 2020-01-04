@@ -1709,7 +1709,7 @@ footer .foot-links ul li:not(:last-child) {
 }
 
 footer .foot-links ul li.info:not(:last-child) {
-  margin-bottom: 14px;
+  margin-bottom: 10px;
 }
 
 footer .foot-links ul li.info {
@@ -1763,7 +1763,7 @@ html[dir="ltr"] footer .foot-links ul li i.fa-phone {
 }
 
 footer .foot-links ul li a {
-  font-size: 14px;
+  font-size: 16px;
   font-family: "tj";
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
