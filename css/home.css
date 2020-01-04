@@ -18,6 +18,7 @@ html::-webkit-scrollbar-thumb {
 
 body {
   font-family: 'tj', sans-serif;
+  overflow-x: hidden;
 }
 
 * {
