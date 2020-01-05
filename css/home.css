@@ -808,6 +808,11 @@ html[dir='ltr'] .main-slider .item {
   direction: ltr;
 }
 
+html[dir='ltr'] .main-slider .item img {
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+
 .main-slider .item .container {
   position: absolute;
   top: 50%;
