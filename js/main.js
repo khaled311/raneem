@@ -9,11 +9,11 @@ $(function() {
       .find(".dropDown")
       .slideUp();
     $(this)
-      .find("i")
+      .find("span")
       .toggleClass("open");
     $(this)
       .siblings()
-      .find("i")
+      .find("span")
       .removeClass("open");
     e.stopPropagation();
   });
@@ -66,7 +66,7 @@ $(function() {
 
   // Main Slider
   $(".main-slider .owl-carousel").owlCarousel({
-    autoplay: true,
+    // autoplay: true,
     rtl: true,
     loop: true,
     nav: false,

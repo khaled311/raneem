@@ -18,7 +18,12 @@ html::-webkit-scrollbar-thumb {
 
 body {
   font-family: 'tj', sans-serif;
-  overflow-x: hidden;
+}
+
+@media (max-width: 991px) {
+  body {
+    overflow-x: hidden;
+  }
 }
 
 * {
@@ -306,7 +311,7 @@ html[dir="ltr"] .sideNav .options .search_pop {
   -webkit-transform: translateX(10px);
           transform: translateX(10px);
   opacity: 0;
-  width: 115px;
+  width: 140px;
 }
 
 .sideNav > ul > li:nth-child(1) {
@@ -363,22 +368,22 @@ html[dir="ltr"] .sideNav .options .search_pop {
   color: #777;
 }
 
-.sideNav > ul > li i {
+.sideNav > ul > li span {
   position: absolute;
   top: 17px;
-  left: 17px;
-  font-size: 9px;
+  left: 20px;
+  font-size: 12px;
   color: #4b4c4c;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-html[dir="ltr"] .sideNav > ul > li i {
+html[dir="ltr"] .sideNav > ul > li span {
   left: unset;
-  right: 13px;
+  right: 0;
 }
 
-.sideNav > ul > li i.open {
+.sideNav > ul > li span.open {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
@@ -407,18 +412,26 @@ html[dir="ltr"] .sideNav > ul > li i {
 }
 
 .navBar {
-  padding: 15px 0;
+  padding: 23px 0;
   background-color: #fff;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  width: 100%;
   z-index: 999;
   background-color: #fff;
 }
 
+@media (max-width: 767px) {
+  .navBar {
+    padding: 15px 0;
+  }
+}
+
 .navBar.scroll {
+  padding: 15px 0;
   -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 }
@@ -519,7 +532,7 @@ html[dir="ltr"] .navBar .content .links ul li:not(:last-child) {
 
 .navBar .content .links ul li a {
   font-family: "tjMd";
-  font-size: 17px;
+  font-size: 16px;
   color: #4b4c4c;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -561,7 +574,6 @@ html[dir="ltr"] .navBar .content .links ul li:not(:last-child) {
 html[dir="ltr"] .navBar .content .links ul li.drop .dropDown {
   left: calc(-1 * (160px / 2) + 40px);
   right: unset;
-  width: 190px;
 }
 
 .navBar .content .links ul li.drop .dropDown:after {
@@ -631,24 +643,21 @@ html[dir="ltr"] .navBar .content .links ul li.drop .dropDown ul li a {
   z-index: 99;
 }
 
-.navBar .content .links ul li.drop > a:after {
-  content: "\f078";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  display: inline-block;
+.navBar .content .links ul li.drop > a + span {
   color: #4b4c4c;
   font-size: 9px;
   margin-right: 5px;
+  font-weight: bold;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-html[dir="ltr"] .navBar .content .links ul li.drop > a:after {
+html[dir="ltr"] .navBar .content .links ul li.drop > a + span {
   margin-right: 0;
   margin-left: 5px;
 }
 
-.navBar .content .links ul li.drop > a:hover:after {
+.navBar .content .links ul li.drop > a:hover + span {
   color: #406aa0;
 }
 
@@ -656,7 +665,7 @@ html[dir="ltr"] .navBar .content .links ul li.drop > a:after {
   color: #406aa0;
 }
 
-.navBar .content .links ul li:hover > a:after {
+.navBar .content .links ul li:hover > a + span {
   color: #406aa0;
 }
 
@@ -789,6 +798,133 @@ html[dir="ltr"] .navBar .content .lang {
 
 .main-slider {
   margin-top: 0px;
+}
+
+.main-slider .item {
+  position: relative;
+}
+
+html[dir='ltr'] .main-slider .item {
+  direction: ltr;
+}
+
+.main-slider .item .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@media (max-width: 767px) {
+  .main-slider .item .container {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.main-slider .item .container .caption {
+  max-width: 560px;
+}
+
+@media (max-width: 767px) {
+  .main-slider .item .container .caption {
+    margin: auto;
+  }
+}
+
+.main-slider .item .container .caption h2 {
+  font-size: 40px;
+  color: #FFF;
+  font-family: "tjBlk";
+  margin: 0;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 991px) {
+  .main-slider .item .container .caption h2 {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-slider .item .container .caption h2 {
+    font-size: 18px !important;
+  }
+}
+
+.main-slider .item .container .caption p {
+  font-size: 20px;
+  font-family: "tjMd";
+  color: #FFF;
+  margin: 0;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 991px) {
+  .main-slider .item .container .caption p {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 767px) {
+  .main-slider .item .container .caption p {
+    display: none;
+  }
+}
+
+.main-slider .item .container .caption a {
+  display: block;
+  width: 150px;
+  height: 40px;
+  background-color: #E78425;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 14px;
+  font-family: "tjMd";
+  color: #fff;
+  border-radius: 100px;
+  position: relative;
+  padding: 0 23px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.main-slider .item .container .caption a span {
+  font-size: 18px;
+}
+
+@media (max-width: 991px) {
+  .main-slider .item .container .caption a {
+    width: 120px;
+    height: 30px;
+    font-size: 13px;
+    padding: 0 18px;
+  }
+}
+
+@media (max-width: 767px) {
+  .main-slider .item .container .caption a {
+    margin: auto;
+  }
+}
+
+.main-slider .item .container .caption a:hover {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+  background-color: #4A71A3;
+  color: #fff;
 }
 
 .main-slider .owl-nav {
@@ -970,7 +1106,7 @@ html[dir="ltr"] .navBar .content .lang {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  font-size: 14;
+  font-size: 14px;
   font-family: "tjMd";
   color: #878787;
   border-radius: 100px;
@@ -1977,10 +2113,16 @@ html[dir="ltr"] .end .content .social a:not(:last-child) {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  border: 4px solid #4A71A3;
+  border: 0;
   border-left: 4px solid #FFF;
   -webkit-animation: spin 1s linear infinite;
           animation: spin 1s linear infinite;
+}
+
+@media (max-width: 767px) {
+  h2 {
+    font-size: 22px !important;
+  }
 }
 
 /*# sourceMappingURL=home.css.map */
