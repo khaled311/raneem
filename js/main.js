@@ -9,11 +9,11 @@ $(function() {
       .find(".dropDown")
       .slideUp();
     $(this)
-      .find("span")
+      .find("a.lnr")
       .toggleClass("open");
     $(this)
       .siblings()
-      .find("span")
+      .find("a.lnr")
       .removeClass("open");
     e.stopPropagation();
   });
