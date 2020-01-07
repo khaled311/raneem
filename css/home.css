@@ -1308,6 +1308,29 @@ html[dir="ltr"] .main-slider .item img {
   }
 }
 
+.services .col-md-4:nth-child(1) img {
+  -webkit-filter: invert(57%) sepia(24%) saturate(972%) hue-rotate(63deg) brightness(98%) contrast(93%);
+          filter: invert(57%) sepia(24%) saturate(972%) hue-rotate(63deg) brightness(98%) contrast(93%);
+}
+
+.services .col-md-4:nth-child(2) .img-box img {
+  -webkit-filter: invert(56%) sepia(87%) saturate(947%) hue-rotate(346deg) brightness(95%) contrast(91%);
+          filter: invert(56%) sepia(87%) saturate(947%) hue-rotate(346deg) brightness(95%) contrast(91%);
+}
+
+.services .col-md-4:nth-child(2) .content a:hover {
+  background-color: #e88522;
+}
+
+.services .col-md-4:nth-child(3) .img-box img {
+  -webkit-filter: invert(64%) sepia(28%) saturate(18%) hue-rotate(14deg) brightness(89%) contrast(101%);
+          filter: invert(64%) sepia(28%) saturate(18%) hue-rotate(14deg) brightness(89%) contrast(101%);
+}
+
+.services .col-md-4:nth-child(3) .content a:hover {
+  background-color: #999999;
+}
+
 .services .heading h2 {
   font-size: 28px;
   color: #4b4c4c;
@@ -1431,29 +1454,6 @@ html[dir="ltr"] .services .services-box .content a span {
 .services .services-box .content a:hover {
   background-color: #5cae45;
   color: #fff;
-}
-
-.services .services-box.firstB img {
-  -webkit-filter: invert(57%) sepia(24%) saturate(972%) hue-rotate(63deg) brightness(98%) contrast(93%);
-          filter: invert(57%) sepia(24%) saturate(972%) hue-rotate(63deg) brightness(98%) contrast(93%);
-}
-
-.services .services-box.center .img-box img {
-  -webkit-filter: invert(56%) sepia(87%) saturate(947%) hue-rotate(346deg) brightness(95%) contrast(91%);
-          filter: invert(56%) sepia(87%) saturate(947%) hue-rotate(346deg) brightness(95%) contrast(91%);
-}
-
-.services .services-box.center .content a:hover {
-  background-color: #e88522;
-}
-
-.services .services-box.left .img-box img {
-  -webkit-filter: invert(64%) sepia(28%) saturate(18%) hue-rotate(14deg) brightness(89%) contrast(101%);
-          filter: invert(64%) sepia(28%) saturate(18%) hue-rotate(14deg) brightness(89%) contrast(101%);
-}
-
-.services .services-box.left .content a:hover {
-  background-color: #999999;
 }
 
 .customers {
